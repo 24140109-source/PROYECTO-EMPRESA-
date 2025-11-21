@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAWZZY | ODS 15, Donadores y Atención al Cliente</title>
+    <style>
+       
+        /* ESTILOS DEL CÓDIGO 1 (BASE) */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* Fondo claro */
+            color: #333;
+        }
+
+
+        header.ods15-header {
+            background-color: #38761D; /* Verde oscuro para el objetivo 15 */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+
+        header.ods15-header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+
+        .header-logo {
+            display: block;
+            margin: 10px auto 0;
+            max-width: 100px;
+            height: auto;
+            border-radius: 50%;
+        }
+
+
+        .container {
+            width: 80%;
+            max-width: 1200px; /* Añadido un max-width para mejor control */
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+
+        section {
+            background-color: white;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 8px; /* Bordes redondeados */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+
+        h2 {
+            color: #38761D; /* Título secundario en verde */
+            border-bottom: 3px solid #6AA84F; /* Línea decorativa */
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+
+        .metas-lista {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+       
+        .meta-item {
+            background-color: #E6F3E6;
+            padding: 15px;
+            border-left: 5px solid #38761D;
+            border-radius: 5px;
+            flex: 1 1 calc(50% - 20px);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+
+        .meta-item strong {
+            color: #274E13;
+        }
+
+
+        .accion {
+            text-align: center;
+            background-color: #D9EAD3;
+            border-radius: 8px;
+            padding: 40px 20px;
+        }
+
+
+        .accion a {
+            display: inline-block;
+            background-color: #6AA84F;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 15px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+
+        .accion a:hover {
+            background-color: #38761D;
+        }
+
+
+        .donacion {
+            text-align: center;
+            background-color: #FFFBEB;
+            border: 2px solid #FFD700;
+            padding: 40px 20px;
+            border-radius: 8px;
+        }
+
+
+        .donacion-opciones {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+
+
+        .donacion-opcion {
+            background-color: #FFFFFF;
+            border: 1px solid #CCCCCC;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s, border-color 0.2s;
+            font-weight: bold;
+            color: #38761D;
+        }
+
+
+        .donacion-opcion:hover {
+            background-color: #E6F3E6;
+            border-color: #38761D;
+        }
+
+
+        .donacion button {
+            background-color: #38761D;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            margin-top: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+
+        .donacion button:hover {
+            background-color: #274E13;
+        }
+       
+        .contact-info, .faq, .form-section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #38761D;
+        }
+
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+
+        .form-section button {
+            background-color: #38761D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+
+
+        .form-section button:hover {
+            background-color: #274E13;
+        }
+
+
+        .faq ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .faq li {
+            margin-bottom: 15px;
+            padding-left: 1.5em;
+            text-indent: -1.5em;
+        }
+        .faq li::before {
+            content: "•";
+            margin-right: 0.5em;
+            color: #38761D;
+        }
+
+
+        footer {
+            background-color: #274E13;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+
+
+        /* ESTILOS UNIFICADOS DEL CÓDIGO 2 (DONADORES) */
+       
+        .donadores-header {
+            background: linear-gradient(90deg, #2e8b57, #3cb371);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        .donadores-header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+
+        .donadores-content {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+
+        .donadores-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+
+        .donador-card {
+            background-color: #ffffff;
+            border: 1px solid #cfe8d8;
+            border-radius: 8px;
+            padding: 20px;
+            flex: 1 1 280px;
+            box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+        }
+
+
+        .donador-card h3 {
+            margin-top: 0;
+            color: #2e8b57;
+        }
+
+
+        .destino-donaciones-box {
+            background-color: #eaf7ef;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+
+        .destino-donaciones-box ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .destino-donaciones-box li {
+            padding: 5px 0;
+            border-bottom: 1px dotted #d0d0d0;
+        }
+        .destino-donaciones-box li:last-child {
+            border-bottom: none;
+        }
+       
+        /* ESTILOS DE LA BARRA DE NAVEGACIÓN (NAVBAR) */
+        .navbar {
+            background-color: #274E13;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar-content {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar-logo {
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .navbar-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+        .navbar-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            transition: color 0.3s;
+        }
+        .navbar-links a:hover {
+            color: #6AA84F;
+        }
+
+
+        /* Media Query Navbar */
+        @media (max-width: 600px) {
+            .navbar-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .navbar-links {
+                margin-top: 10px;
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+
+        /* ESTILOS DEL CÓDIGO 2 PARA LA SECCIÓN ONU/RELACIÓN */
+
+
+        .hero-onu {
+            /* Usamos la imagen de fondo sugerida en el código 2 */
+            background: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80') center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+
+        .hero-onu::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+        }
+
+
+        .hero-onu h2, .hero-onu p {
+            position: relative;
+            z-index: 1;
+        }
+
+
+        .cards-onu {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 40px;
+            justify-content: center;
+        }
+
+
+        .card-onu {
+            background-color: #E6F3E6; /* Usamos un color verde consistente */
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            flex: 1 1 calc(33.333% - 20px);
+            padding: 20px;
+            text-align: center;
+        }
+
+
+        .card-onu img {
+            width: 80px;
+            margin-bottom: 10px;
+        }
+
+
+        .card-onu h4 {
+            color: #274E13;
+        }
+
+
+
+
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+            .metas-lista, .donadores-grid, .cards-onu {
+                flex-direction: column;
+            }
+            .card-onu {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="#pawzzy-inicio" class="navbar-logo">PAWZZY</a>
+            <ul class="navbar-links">
+                <li><a href="#pawzzy-ods15">ODS 15</a></li>
+                <li><a href="#seccion-onu">ONU</a></li> <li><a href="#seccion-donadores">Donadores</a></li>
+                <li><a href="#atencion-cliente">Contacto</a></li>
+                <li><a href="#donaciones">¡Donar!</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div id="pawzzy-ods15" class="container">
+        <header class="ods15-header">
+            <h1>Vida de Ecosistemas Terrestres (ODS 15)</h1>
+            <h1>PAWZZY</h1>
+            <p>Agenda 2030 para el Desarrollo Sostenible</p>
+            <img src="Captura.png" class="header-logo" alt="Logo de PAWZZY">
+        </header>
+   
+        <section id="introduccion">
+            <h2>Proteger nuestro planeta</h2>
+            <p>Nosotros en PAWZZY, buscamos una vida digna a los animales los cuales se les ha vulnerado su hábitat natural como lo son los ecosistemas naturales los cuales a lo largo de la historia han sido vulnerados, olvidados y hasta maltratados, lo que hace que provoca que se vulnere la vida de los animales o hasta se mueran y se extinga su especie.
+            Por eso, PAWZZY, como una empresa la cual organiza campañas de consciencia y actividades colectivas altruistas que ayudan al cuidado y protección de ecosistemas de Latinoamérica para que se respeten los derechos de los animales y así mismo, mejorar los recursos naturales de la naturaleza..</p>
+            <p>Los ecosistemas terrestres, como los bosques y las montañas, son vitales para la vida. Su conservación es crucial para combatir el cambio climático, asegurar el suministro de agua y alimentos, y proteger la diversidad biológica.</p>
+        </section>
+
+
+        <section id="metas-clave">
+            <h2>Metas principales del ODS 15</h2>
+            <ul class="metas-lista">
+                <li class="meta-item">
+                    <strong>1: Conservación de los Ecosistemas</strong>
+                    <p>Velar por la conservación, el restablecimiento y el uso sostenible de los ecosistemas terrestres y la diversidad biológica.</p>
+                </li>
+                <li class="meta-item">
+                    <strong>2: Gestión Sostenible de Bosques</strong>
+                    <p>Promover la gestión sostenible de todos los tipos de bosques, poner fin a la deforestación y aumentar la forestación.</p>
+                </li>
+                <li class="meta-item">
+                    <strong>3: Lucha contra la Desertificación</strong>
+                    <p>Luchar contra la desertificación, rehabilitar las tierras y los suelos degradados, y procurar lograr un mundo con efecto neutro en la degradación de las tierras.</p>
+                </li>
+                <li class="meta-item">
+                    <strong>4: Salvar animales en peligro</strong>
+                    <p>Hacer conciencia de como, los humanos estámos acabando con razas de animales unicas</p>
+                </li>
+                <li class="meta-item">
+                    <strong>5: Detener la Pérdida de Biodiversidad</strong>
+                    <p>Adoptar medidas urgentes y significativas para reducir la degradación de los hábitats naturales y detener la pérdida de biodiversidad.</p>
+                </li>
+            </ul>
+        </section>
+
+
+        <section id="llamada-accion" class="accion">
+            <h2>¿Cómo puedes contribuir al ODS 15?</h2>
+            <p>Desde la elección de productos sostenibles hasta el apoyo a iniciativas de reforestación, cada acción cuenta para proteger la vida en la tierra.</p>
+            <a href="https://www.un.org/sustainabledevelopment/es/biodiversity/" target="_blank">Conoce más acciones aquí</a>
+        </section>
+
+
+        <section id="atencion-cliente">
+            <h2>Atención al Cliente</h2>
+            <p>Comprometidos con la vida de los ecosistemas terrestres</p>
+            <hr style="border: 1px solid #6AA84F;">
+           
+            <div class="contact-info">
+                <h3>¿Necesitas ayuda?</h3>
+                <p>Nuestro equipo de atención está listo para ayudarte con cualquier consulta relacionada con nuestros proyectos ambientales, donaciones, o programas de voluntariado.</p>
+                <p><strong>Teléfono:</strong> +34 900 123 45</p>
+                <p><strong>Email:</strong> ecosistemas@pawssy.edu.mx</p>
+                <p><strong>Horario de atención:</strong> Lunes a Viernes, 9:00AM a 20:00PM</p>
+            </div>
+
+
+            <div class="faq">
+                <h3>Preguntas Frecuentes</h3>
+                <ul>
+                    <li><strong>¿Cómo puedo apoyar los ecosistemas terrestres?</strong> Puedes unirte como voluntario o hacer una donación.</li>
+                    <li><strong>¿Dónde operan los programas?</strong> Trabajamos en áreas rurales, parques nacionales y reservas ecológicas.</li>
+                    <li><strong>¿Mi empresa puede colaborar?</strong> Sí, ofrecemos convenios de colaboración con empresas comprometidas.</li>
+                </ul>
+            </div>
+
+
+            <div class="form-section">
+                <h3>Formulario de Contacto</h3>
+                <form>
+                    <label for="name">Nombre completo</label>
+                    <input type="text" id="name" name="name" required>
+
+
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required>
+
+
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+
+                    <button type="submit">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+    </div>
+   
+    <div id="seccion-onu" class="container">
+        <section class="hero-onu">
+            <h2>Protegiendo los Ecosistemas, Inspirando a la Acción</h2>
+            <p>PAWZZY: ¿Cómo nos relacionamos con la Agenda 2030? </p>
+        </section>
+       
+        <section class="onu-content">
+            <h2>Nuestro Compromiso con la ONU y ODS 15</h2>
+            <p>
+                En PAWZZY creemos que cada persona tiene el poder de generar un impacto positivo en el planeta.
+                A través de nuestras campañas con comunidades e influencers, promovemos acciones que apoyan la
+                <strong>Agenda 2030 por medio del Objetivo del Desarrollo Sostenible 15</strong>.
+                Este objetivo busca proteger, restaurar y promover el uso sostenible de los ecosistemas terrestres,
+                gestionar los bosques de forma sostenible, luchar contra la desertificación, detener e invertir la degradación
+                de las tierras y detener la pérdida de biodiversidad.
+            </p>
+
+
+            <p>
+                Nuestras iniciativas se centran en la <strong>educación ambiental</strong>, la <strong>reforestación</strong>, y la
+                <strong>colaboración digital</strong> con creadores de contenido comprometidos con el planeta.
+                Juntos amplificamos el mensaje de conservación y motivamos a más personas a cuidar de los entornos naturales que nos rodean.
+            </p>
+
+
+            <div class="cards-onu">
+                <div class="card-onu">
+                    <img src="https://img.icons8.com/color/96/forest.png" alt="Reforestación">
+                    <h4>Reforestación y Protección</h4>
+                    <p>Organizamos campañas de plantación de árboles junto a comunidades locales para restaurar hábitats naturales y
+                        hacemos campañas las cuales organizan un control para que las comunidades rurales cuiden de su entorno.</p>
+                </div>
+
+
+                <div class="card-onu">
+                    <img src="https://img.icons8.com/color/96/instagram-new.png" alt="Influencers">
+                    <h4>Campañas con Influencers y Donativos </h4>
+                    <p>Colaboramos con voces influyentes para difundir mensajes sobre conservación y consumo responsable, y nos asociamos
+                        con empresas sostenibles y que esten comprometidos con el medio ambiente y su cuidado.</p>
+                </div>
+
+
+                <div class="card-onu">
+                    <img src="https://img.icons8.com/color/96/earth-planet.png" alt="Educación Ambiental">
+                    <h4>Educación Ambiental en Comunidades Rurales</h4>
+                    <p>Promovemos talleres y contenido digital que inspiran a cuidar los ecosistemas terrestres y su biodiversidad.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <div id="seccion-donadores" class="container">
+       
+        <div class="donadores-header">
+            <h1>Donadores de Vida en los Ecosistemas</h1>
+            <p>Gracias a quienes ayudan a preservar la biodiversidad del planeta</p>
+        </div>
+
+
+        <div class="donadores-content">
+            <section>
+                <h2>¿Cómo logramos que donen?</h2>
+                <p>Motivamos a las personas y empresas a contribuir a la conservación mediante transparencia, impacto medible y conexión emocional con la naturaleza. Compartimos historias reales de comunidades y ecosistemas beneficiados por sus aportes.</p>
+            </section>
+
+
+            <section>
+                <h2>Frecuencia de Donaciones</h2>
+                <p>La mayoría de nuestros donadores realizan contribuciones <strong>mensuales o trimestrales</strong>, lo que nos permite mantener un flujo constante de apoyo para nuestros proyectos de reforestación, rescate de fauna y educación ambiental.</p>
+            </section>
+
+
+            <section>
+                <h2>Campañas Colaborativas</h2>
+                <div class="donadores-grid">
+                    <div class="donador-card">
+                        <h3>“Bosques Vivos”</h3>
+                        <p>Proyecto de reforestación en zonas afectadas por incendios. Gracias a esta campaña hemos plantado más de 50,000 árboles.</p>
+                    </div>
+                    <div class="donador-card">
+                        <h3>“Guardianes del Mar”</h3>
+                        <p>Colaboración con organizaciones marinas para la protección de tortugas y limpieza de playas.</p>
+                    </div>
+                    <div class="donador-card">
+                        <h3>“Educar para Conservar”</h3>
+                        <p>Campaña de talleres ambientales en escuelas rurales y urbanas para promover el cuidado del entorno natural.</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <section>
+                <h2>¿En qué utilizamos las donaciones?</h2>
+                <div class="destino-donaciones-box">
+                    <ul>
+                        <li><strong>40%</strong> – Reforestación y restauración de hábitats.</li>
+                        <li><strong>25%</strong> – Programas de rescate y rehabilitación de fauna.</li>
+                        <li><strong>20%</strong> – Educación ambiental y campañas de concientización.</li>
+                        <li><strong>10%</strong> – Innovación en sostenibilidad y energía verde.</li>
+                        <li><strong>5%</strong> – Administración y transparencia de proyectos.</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+    <section id="donaciones" class="donacion">
+            <h2>Apoya a PAWZZY: Tu donación salva vidas</h2>
+            <p>Tu contribución directa nos permite organizar más campañas de protección, reforestación y rescate animal en Latinoamérica.</p>
+           
+            <div class="donacion-opciones">
+                <span class="donacion-opcion" onclick="seleccionarMonto(10)">$10</span>
+                <span class="donacion-opcion" onclick="seleccionarMonto(25)">$25</span>
+                <span class="donacion-opcion" onclick="seleccionarMonto(50)">$50</span>
+                <span class="donacion-opcion" onclick="seleccionarMonto(100)">$100</span>
+            </div>
+           
+            <input type="number" id="monto-personalizado" placeholder="Otro monto (USD)" style="padding: 10px; margin-top: 15px; border-radius: 5px; border: 1px solid #ccc; width: 200px; text-align: center;">
+
+
+            <button onclick="procesarDonacion()">¡Donar Ahora!</button>
+           
+            <p style="font-size: 0.9em; margin-top: 15px;">*La donación se procesará de forma segura.</p>
+    </section>
+
+
+    <footer>
+        <p>© 2025 - Inspirado en la Agenda 2030 de la ONU. | PAWZZY: Unidos por los Ecosistemas Terrestres</p>
+    </footer>
+
+
+    <script>
+        function seleccionarMonto(monto) {
+            document.getElementById('monto-personalizado').value = monto;
+            alert(`Has seleccionado donar $${monto}.`);
+        }
+
+
+        function procesarDonacion() {
+            const monto = document.getElementById('monto-personalizado').value;
+            if (monto > 0) {
+                alert(`¡Gracias por tu donación de $${monto}! Serás redirigido a la pasarela de pago.`);
+                // Aquí iría el código real para redirigir a PayPal, Stripe, etc.
+            } else {
+                alert('Por favor, ingresa un monto válido para donar.');
+            }
+        }
+    </script>
+</body>
+</html>
